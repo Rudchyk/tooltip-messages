@@ -26,8 +26,14 @@ a { text-decoration: none; }
 .m50{
 	margin-bottom: 100px;
 }
+.up{
+	cursor: pointer;
+}
+.none{
+	display: none!important;
+}
 /*valid style*/
-.valid-wrapper{
+.tooltip-wrapper{
 	position: relative;
 	display: inline-block;
 }
@@ -38,11 +44,12 @@ a { text-decoration: none; }
 	background: #f34c4c;
 	box-shadow: 2px 2px 3px rgba(0,0,0,.5);
 	position: absolute;
-	width: 150px;
-	/*white-space: nowrap;*/
+	/*width: 150px;*/
+	white-space: nowrap;
 	z-index: 1000;	
 	text-align: left;
 	line-height: 1.2;
+	padding: 20px;
 }
 .valid-massege:before{
 	content: '';
@@ -90,10 +97,6 @@ a { text-decoration: none; }
 	border-bottom-color: #f34c4c;	
 }
 /*end valid style*/
-.tooltip-wrapper{
-	position: relative;
-	display: inline-block;
-}
 .tooltip-wrapper:hover .tooltip-massege{
 	display: block;
 }
@@ -107,6 +110,7 @@ a { text-decoration: none; }
 	text-align: center;
 	line-height: 1.2;
 	display: none;
+	padding: 5px;
 }
 .tooltip-massege:before{
 	content: '';

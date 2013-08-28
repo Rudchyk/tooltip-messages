@@ -13,11 +13,11 @@ $(document).ready(function(){
 		tooltipSide: "left"
 	});
 	$('.tooltip-wrapper-top-js').tooltip({
-		tooltipSide: "top",
-	tooltipLeftPadding: 10,
-	tooltipRightPadding: 10,
-	tooltipTopPadding: 5,
-	tooltipBottomPadding: 5			 	
+		tooltipSide: "top"		 	
+	});
+
+	$('.up').click(function() {
+		$('#bla').toggleClass('none');
 	});
 }); // Ready
 
@@ -28,35 +28,28 @@ $(document).ready(function(){
 		this._init = function(element, options) {
 
 			var defaults = {
-				tooltipWrapper: $(element),
-				tooltipSide: "bottom",
-				tooltipLeftPadding: 10,
-                tooltipRightPadding: 10,
-                tooltipTopPadding: 10,
-                tooltipBottomPadding: 10
+				tooltipElement: $(element),
+				tooltipSide: "left"
 			},
 			settings = $.extend(defaults, options); 
 
-			settings.tooltipWrapper.each(function(i){
-				var tooltip = $(this).find(".tooltip-js"),
-					tooltipWrapperHeight = $(this).height(),
-					tooltipHeight = tooltip.height() + settings.tooltipTopPadding + settings.tooltipBottomPadding,
-					tooltipWrapperWidth = $(this).width(),
-					tooltipWidth = tooltip.width() + settings.tooltipLeftPadding + settings.tooltipRightPadding;
-
-				tooltip.css({paddingLeft: settings.tooltipLeftPadding, paddingRight: settings.tooltipRightPadding, paddingTop: settings.tooltipTopPadding, paddingBottom: settings.tooltipBottomPadding});
+			settings.tooltipElement.each(function(i){
+				var tooltipElementHeight = $(this).actual( "outerHeight", { absolute : true } ),
+					tooltipWrapperHeight = $(this).parent(".tooltip-wrapper").actual( "outerHeight", { absolute : true } ),
+					tooltipElementWidth = $(this).actual( "outerWidth", { absolute : true } ),
+					tooltipWrapperWidth = $(this).parent(".tooltip-wrapper").actual( "outerWidth", { absolute : true } );
 
 				if (settings.tooltipSide == "left") {
-					tooltip.addClass('tooltip-left').css({top:-((tooltipHeight)/2 - tooltipWrapperHeight/2)});
+					$(this).addClass('tooltip-left').css({top:-(tooltipElementHeight/2 - tooltipWrapperHeight/2)});
 				}
 				else if (settings.tooltipSide == "right"){
-					tooltip.addClass('tooltip-right').css({top:-((tooltipHeight)/2 - tooltipWrapperHeight/2)});
+					$(this).addClass('tooltip-right').css({top:-(tooltipElementHeight/2 - tooltipWrapperHeight/2)});
 				}
 				else if (settings.tooltipSide == "top"){
-					tooltip.addClass('tooltip-top').css({left: -(((tooltipWidth) - tooltipWrapperWidth)/2)});
+					$(this).addClass('tooltip-top').css({left: -((tooltipElementWidth - tooltipWrapperWidth)/2)});
 				}
 				else if (settings.tooltipSide == "bottom"){
-					tooltip.addClass('tooltip-bottom').css({left: -(((tooltipWidth) - tooltipWrapperWidth)/2)});					
+					$(this).addClass('tooltip-bottom').css({left: -((tooltipElementWidth - tooltipWrapperWidth)/2)});					
 				}
 				
 
