@@ -29,7 +29,7 @@ $(document).ready(function(){
 
 			var defaults = {
 				tooltipElement: $(element),
-				tooltipSide: "left"
+				tooltipSide: "right"
 			},
 			settings = $.extend(defaults, options); 
 
