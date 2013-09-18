@@ -127,3 +127,21 @@ a { text-decoration: none; }
 	margin-left: -10px;
 	border-top-color: #000;	
 }
+.fix-massege{
+	padding: 5px;
+	background: #000;
+	border-radius: 5px;
+	color: #fff;
+	display: none;
+	position: fixed;
+	z-index: 1000;
+}
+.fix-massege-wrapper:hover .fix-massege{
+	display: block;
+}
+.fix-massege-wrapper{
+	cursor: default;
+}
+.text{
+	text-align: left;
+}
