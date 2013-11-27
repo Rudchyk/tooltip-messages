@@ -6,61 +6,32 @@
 	    <title>Test</title>
         <link rel="stylesheet" media="screen" href="css/reset.min.css">
         <link rel="stylesheet" media="screen" href="css/styles.css">
+        <link rel="stylesheet" media="screen" href="css/elMessage.css">
     </head>
 
     <body>
-     <div class="main">
+     <div class="main tac">
       <form action="#" method="post" class="customForm">
-            <div class="tooltip-wrapper valid-wrapper">
-                <input type="text" class="field">
-                <div class="valid-massege valid-wrapper-left-js">
-                    Вообще не правильный пароль вводите 
-                </div>  
-            </div>
-            <div class="m50"></div>
-            <div class="tooltip-wrapper valid-wrapper">
-                <input type="text" class="field2">
-                <div class="valid-massege valid-wrapper-right-js">
-                    Вообще не правильный пароль вводите 
-                </div>  
-            </div>
-            <div class="m50"></div>
-            <div class="tooltip-wrapper valid-wrapper">
-                <input type="text" class="field3">
-                <div class="valid-massege valid-wrapper-bottom-js">
-                    Вообще не правильный пароль вводите 
-                </div>  
-            </div>
-            <div class="m50"></div>
+            <p class="m50">
+                <input type="text" class="field tip tip-js" data-message="Неправильный пароль 1">
+            </p>
+            <p class="m50">
+                <input type="text" class="field tip tip2-js" data-message="Неправильный пароль 2">
+            </p>
+            <p class="m50">
+                <input type="text" class="field tip tip3-js" data-message="Неправильный пароль 3">
+            </p>
+            <p class="m50">
+                <input type="text" class="field tip tip4-js" data-message="Неправильный пароль 4">
+            </p>
+            <p class="m50">
+                <input type="text" class="field tip tip5-js" data-message="Неправильный плавающий пароль">
+            </p>
             <p>
                 <span class="up">Показать</span>
             </p>
-            <div id="bla" class="tooltip-wrapper tooltip-mess-wrapper none">
-                <input type="text" class="field3">
-                <div class="tooltip-massege tooltip-wrapper-top-js">
-                    Вообще не правильный пароль вводите Вообще не правильный пароль вводите 
-                </div> 
-                <div class="valid-massege valid-wrapper-right-js">
-                    Вообще не правильный пароль вводите 
-                </div>  
-            </div>
-            <div class="m50"></div>
-            <div class="tooltip-wrapper fix-massege-wrapper">
-                <p class="text">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis, architecto, soluta, deserunt dignissimos ad quasi in quia accusantium perspiciatis sapiente ea similique veniam aliquam omnis laborum magnam expedita perferendis tenetur odio quo veritatis porro numquam aperiam amet nobis earum reprehenderit asperiores quas modi animi aliquid velit cum pariatur. Nesciunt, aut.
-                </p>
-                <div class="fix-massege fix-massege-js">
-                    Вообще не правильный пароль вводите 
-                </div>  
-            </div>
-            <div class="m50"></div>
-            <div class="tooltip-wrapper fix-massege-wrapper">
-                <p class="text">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis, architecto, soluta, deserunt dignissimos ad quasi in quia accusantium perspiciatis sapiente ea similique veniam aliquam.
-                </p>
-                <div class="fix-massege fix-massege-js">
-                    Вообще не правильный пароль вводите 222
-                </div>  
+            <div id="bla" class="none">
+                <input type="text" class="field tip tip6-js" data-message="Неправильный пароль 6"> 
             </div>
         </form>
     </div>
