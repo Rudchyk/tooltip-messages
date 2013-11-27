@@ -39,3 +39,6 @@ a { text-decoration: none; }
 .messageTip.elMessage-bottom{
 	margin-top: 10px;
 }
+.up{
+	cursor: pointer;
+}
