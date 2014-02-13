@@ -5,7 +5,6 @@
 $(document).ready(function(){
 	$('.tip-js').tooltip({
 		side: "top",
-		hover: false,
 	});
 
 	$('.tip2-js').tooltip();
