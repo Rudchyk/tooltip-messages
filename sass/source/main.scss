@@ -1,0 +1,53 @@
+@import "var";
+
+/* ---------->>> FONTS <<<-----------*/
+
+
+
+/* ---------->>> STANDARD STYLE <<<-----------*/
+
+a,
+.link{
+    color: $base-link-color;
+    text-decoration: underline;
+    &:visited{
+        color: $base-link-color;
+        text-decoration: underline;
+    }
+    &:hover{
+        text-decoration: none;
+    }
+    &:active{
+        text-decoration: underline;
+    }
+}
+
+/* ---------->>> GLOBAL <<<-----------*/
+
+html {
+    min-width: $standard; // No mobile!!!
+    >body .container-wrap{
+        height: auto;
+        min-height: 100%;
+    }
+}
+
+body{
+    background: {
+        color: #f2f2f2;
+    };
+    color: $base-font-color;
+    line-height: 1;
+    font:{
+        family: $base-font-family;
+    }
+    @include adjust-font-size-to(14px);
+}
+
+.container{
+    margin: auto;
+    width: $standard;
+}
+.container-wrap{
+    position: relative;
+}

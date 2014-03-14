@@ -1,46 +1,83 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-
-    <head>
-        <meta charset="utf-8">
-	    <title>Test</title>
-        <link rel="stylesheet" media="screen" href="css/reset.min.css">
-        <link rel="stylesheet" media="screen" href="css/styles.css">
-        <link rel="stylesheet" media="screen" href="css/elMessage.css">
-    </head>
-
-    <body>
-     <div class="main tac">
-      <form action="#" method="post" class="customForm">
-            <p class="m50">
-                <input type="text" class="field tip tip-js" data-message="Неправильный пароль 1" data-posb="1">
-            </p>
-            <p class="m50">
-                <input type="text" class="field tip tip2-js" data-message="Неправильный пароль 2" data-posb="2">
-            </p>
-            <p class="m50">
-                <input type="text" class="field tip tip3-js" data-message="Неправильный пароль 3" data-posb="3">
-            </p>
-            <p class="m50">
-                <input type="text" class="field tip tip4-js" data-message="Неправильный пароль 4" data-posb="4">
-            </p>
-            <p class="m50">
-                <input type="text" class="field tip tip5-js" data-message="Неправильный плавающий пароль" data-posb="5">
-            </p>
-            <p>
-                <span class="up">Показать</span>
-            </p>
-            <div id="bla" class="none">
-                <input type="text" class="field tip tip6-js" data-message="Неправильный пароль 6" data-posb="6"> 
-            </div>
-        </form>
-    </div>
-    
-	<!-- jquery -->	
-	<script src="js/jquery.min.js"></script>
-    <!-- actual -->
-    <script src="js/jquery.actual.min.js"></script>
-	<!-- scripts -->
-	<script src="js/scripts.js"></script>
-    </body>
+<head>
+    <meta charset="UTF-8">
+    <title>Valid &amp; tooltip messages</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- CSS style -->
+    <link rel="stylesheet" href="css/no_valid.css?v=1">
+    <link rel="stylesheet" href="css/index.css?v=1">
+    <!-- Favicons -->
+    <link rel="shortcut icon" href="images/favicon.png">
+    <!-- Scripts -->
+    <script data-headjs-load="js/init.js" src="js/head.min.js"></script>
+</head>
+<body>
+    <div class="container-wrap container">
+        <header role="banner" class="header">
+            Valid and tooltip messages
+        </header>
+        <div class="content clearfix home-content">
+            <section role="main" class="main-section">
+                <div class="title">Valid message right</div>
+                <form action="#" method="post" class="form">
+                    <p class="form-row">
+                        <input type="password" class="field tip tip-right-js" data-tip_message="Ошибка при вводе пароля" data-tip_class="valid-pass-message">
+                    </p>
+                </form>
+            </section><!--end main-section-->
+            <section class="main-section">
+                <div class="title">Valid message top</div>
+                <form action="#" method="post" class="form">
+                    <p class="form-row">
+                        <input type="password" class="field tip tip-top-js" data-tip_message="Ошибка при вводе пароля" data-tip_class="valid-pass-message">
+                    </p>
+                </form>
+            </section><!--end main-section-->
+            <section class="main-section">
+                <div class="title">Valid message bottom</div>
+                <form action="#" method="post" class="form">
+                    <p class="form-row">
+                        <input type="password" class="field tip tip-bottom-js" data-tip_message="Ошибка при вводе пароля" data-tip_class="valid-pass-message">
+                    </p>
+                </form>
+            </section><!--end main-section-->
+            <section class="main-section">
+                <div class="title">Valid message left</div>
+                <form action="#" method="post" class="form">
+                    <p class="form-row">
+                        <input type="password" class="field tip tip-left-js" data-tip_message="Ошибка при вводе пароля" data-tip_class="valid-pass-message">
+                    </p>
+                </form>
+            </section><!--end main-section-->
+            <section class="main-section">
+                <div class="title">Valid message in hidden block</div>
+                <p class="tac show-box">
+                    <span class="link show-box-link">show block</span>
+                </p>
+                <div class="hide-box">
+                    <form action="#" method="post" class="form ">
+                        <p class="form-row">
+                            <input type="text" class="field tip tip-right-js" data-tip_message="Ошибка при вводе имени" data-tip_class="valid-text-message">
+                        </p>
+                    </form>
+                </div>
+            </section><!--end main-section-->
+            <section class="main-section">
+                <div class="title">Tooltip message on hover</div>
+                <div class="tac">
+                    <img src="images/temp/HTML5.png" height="200" width="200" alt="" class="tip tip-js" data-tip_message="Тут подсказка" data-tip_class="tooltip-message">
+                </div>
+            </section><!--end main-section-->
+            <section class="main-section">
+                <div class="title">Tooltip message fix</div>
+                <div class="tip tip-fix-js" data-tip_message="Тут подсказка" data-tip_class="tooltip-message">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam, quisquam, quam tempora delectus magnam recusandae ad corporis eum labore placeat qui consequuntur nemo aperiam dolorum porro esse id cum vero perspiciatis quas praesentium eos excepturi facilis nobis modi. Minus, quidem, a inventore ab pariatur sapiente iure illum et. Fugit, eum, labore sint dolores qui maxime facilis fuga doloremque rem quia! Eos, sunt, sequi nihil officia iste repudiandae tempore maiores necessitatibus dolorem consequatur molestiae pariatur reiciendis commodi voluptatum nulla tenetur deleniti alias assumenda illum cumque sapiente nemo provident deserunt. Magni, esse, totam, eum delectus iure non temporibus eius vero nesciunt officia hic atque dolor sequi accusamus natus laudantium eveniet ut ullam perferendis libero. Ipsum, consequatur, rerum, minus, in architecto perspiciatis fuga vitae earum ullam iure voluptates error neque expedita qui accusantium facilis voluptate animi. Nesciunt, amet veniam asperiores eos corporis. Excepturi, temporibus odit iure voluptatum distinctio nulla neque exercitationem quod harum.
+                </div>
+            </section><!--end main-section-->
+        </div><!--end content-->
+        <footer role="contentinfo" class="footer"></footer><!--end footer-->
+    </div><!--end main block-->
+</body>
 </html>

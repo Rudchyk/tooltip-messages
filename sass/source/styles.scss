@@ -1,0 +1,63 @@
+@import "var";
+
+/* ---------->>> HEADER <<<-----------*/
+
+.header{
+    height: $footer-height;
+    line-height: $footer-height;
+    text-align: center;
+    @include adjust-font-size-to(30px);
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/* ---------->>> CONTENT <<<-----------*/
+
+.content{
+    padding-bottom: $footer-height;
+}
+.title{
+    @include adjust-font-size-to(18px);
+    text-align: center;
+    padding-bottom: 15px;
+}
+.main-section{
+    box-shadow: 0 0 3px #AAA;
+    border-radius: 4px;
+    padding: 20px;
+    background: #fff;
+    margin-bottom: 20px;
+}
+.form{
+    width: 300px;
+    margin: auto;
+}
+.show-box{
+    padding-bottom: 10px;
+}
+.show-box-link{
+    cursor: pointer;
+}
+.hide-box{
+    display: none;
+}
+.valid-text-message{
+    white-space: normal;
+    width: 100px;
+}
+/* ---------->>> FOOTER <<<-----------*/
+
+.footer{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    height: $footer-height;
+    width: 100%;
+}
+
+/* ---------->>> POPUPS <<<-----------*/
+
+/* ---------->>> OTHER STYLES <<<-----------*/
+
+

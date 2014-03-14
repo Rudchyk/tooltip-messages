@@ -1,0 +1,100 @@
+@import "var";
+
+/* ---------->>> FORMS <<<-----------*/
+
+@mixin field-focus{
+    border: 1px solid #aaa;
+    box-shadow:  0 0 3px rgba(0,0,0,.2);
+}
+
+$field-width: 100%;
+$field-background: #fff;
+$field-border: 1px solid #ccc;
+$field-radius: 3px;
+$field-padding: 0 4px;
+$field-color: #444;
+$field-placeholder: #777;
+
+
+/*field style*/
+.field{
+    background: $field-background;
+    border: $field-border;
+    border-radius: $field-radius;
+    @include box-sizing(border-box);
+    padding: $field-padding;
+    color: $field-color;
+    width: $field-width;
+    height: $field-height;
+    max-width: 100%;
+    font:{
+        family: $base-font-family;
+        size: 13px;
+    }
+    &:-moz-placeholder{
+        color: $field-placeholder;
+        opacity: 1;
+    }
+    &::-moz-placeholder{
+        color: $field-placeholder;
+        opacity: 1;
+    }
+    &::-webkit-input-placeholder{
+        color: $field-placeholder;
+    }
+    &:-ms-input-placeholder{
+        color: $field-placeholder;
+    }
+    &.text-placeholder{
+        color: $field-placeholder;
+    }
+    &[data-operaplaceholder]{
+        color: $field-placeholder;
+    }
+    &:focus{
+        @include field-focus;
+    }
+}
+select.field{
+    padding-right: 0;
+}
+textarea.field{
+    min-height: 60px;
+}
+// .field-size{
+//     width: px;
+//     height: px;
+// }
+.error{
+    border-color: #ef5b5b;
+    background-color: #ffebeb;
+    color: #ef5b5b;
+}
+/*end field style*/
+
+/*buttons style*/
+.button{
+    border: 1px solid #aaa;
+    border-radius: 3px;
+    line-height: normal;
+    padding: 0 10px;
+    @include background(linear-gradient(top, rgba(255,255,255,.2), rgba(0,0,0,.2)));
+    text-shadow: 0 1px rgba(255, 255, 255, .75);
+    color: #444;
+    font-size: 13px;
+    height: $field-height;
+    &:hover{
+        @include background(linear-gradient(top, rgba(255,255,255,.3), rgba(0,0,0,.3)));
+        color: #222;
+    }
+}
+a.button,
+span.button{
+    text-align: center;
+    line-height: $field-height;
+    text-decoration: none;
+    &:hover{
+        text-decoration: none;
+    }
+}
+/*end buttons style*/
