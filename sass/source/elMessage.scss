@@ -4,7 +4,7 @@
     }
 }
 
-.elMessage-wrapper{
+.messageTip-wrapper{
     display: inline-block;
     position: relative;
     vertical-align: top;
@@ -37,21 +37,21 @@ $message-indent: 12px;
         content: '';
         position: absolute;
     }
-    &.elMessage-right,
-    &.elMessage-left{
+    &.messageTip-right,
+    &.messageTip-left{
         &:before{
             margin-top: -$arrow-width;
             top: 50%;
         }
     }
-    &.elMessage-top,
-    &.elMessage-bottom{
+    &.messageTip-top,
+    &.messageTip-bottom{
         &:before{
             margin-left: -$arrow-width;
             left: 50%;
         }
     }
-    &.elMessage-right{
+    &.messageTip-right{
         margin-left: $message-indent;
         left: 100%;
         &:before{
@@ -62,7 +62,7 @@ $message-indent: 12px;
             right: 100%;
         }
     }
-    &.elMessage-left{
+    &.messageTip-left{
         margin-right: $message-indent;
         right: 100%;
         &:before{
@@ -73,7 +73,7 @@ $message-indent: 12px;
             left: 100%;
         }
     }
-    &.elMessage-top{
+    &.messageTip-top{
         bottom: 100%;
         margin-bottom: $message-indent;
         &:before{
@@ -84,7 +84,7 @@ $message-indent: 12px;
             top: 100%;
         }
     }
-    &.elMessage-bottom{
+    &.messageTip-bottom{
         margin-top: $message-indent;
         top: 100%;
         &:before{
@@ -95,7 +95,7 @@ $message-indent: 12px;
             bottom: 100%;
         }
     }
-    &.elMessage-fix{
+    &.messageTip-fix{
         position: fixed;
         &:before{
             border: none;

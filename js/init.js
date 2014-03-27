@@ -9,8 +9,7 @@ if (head.browser.ie && head.browser.version < 9) {
 head.js(
     "js/jquery-1.10.2.min.js",
     "js/jquery.actual.min.js",
-    // "js/tip.js",
-    "js/tip.min.js",
+    "js/tip.js",
     "js/scripts.js",
     function() {
 

@@ -6,7 +6,7 @@
             var defaults = {
                 el: $(element),
                 elMessageClass: "messageTip",
-                elMessageSizeClass: 'elMessage',
+                elMessageBl: 'div',
                 fullWidthClass: 'full-width',
                 side: "right",
                 hover: false,
@@ -23,42 +23,44 @@
                     $elWidth = $el.actual( "outerWidth", { absolute : true } ),
                     $elData = $el.data("tip_message"),
                     $elNum = $el.data("tip_class"),
-                    $elMessage = $("<div class='" + settings.elMessageClass + ' ' +$elNum+ "'>" + $elData + "</div>");
+                    $elMessage = $("<" + settings.elMessageBl + " class='" + settings.elMessageClass + ' '+ settings.elMessageClass + '-' + $elNum+ "'>" + $elData + "</" + settings.elMessageBl + ">");
 
                 $el
-                    .wrap('<div class="'+settings.elMessageSizeClass+'-wrapper '+settings.fullWidthClass+'"></div>')
+                    .wrap('<div class="'+settings.elMessageClass+'-wrapper '+settings.fullWidthClass+'"></div>')
                     .parent().append($elMessage);
 
                 var $elMessageHeight = $elMessage.actual( "outerHeight"),
-                    $elMessageWidth = $elMessage.actual( "outerWidth");
+                    $elMessageWidth = $elMessage.actual( "outerWidth"),
+                    $elMessageTop = (($elHeight/2) - ($elMessageHeight/2)),
+                    $elMessageLeft = (($elWidth/2) - ($elMessageWidth/2));
 
                 if (!settings.fix) {
                     if (settings.side == "right") {
                         $elMessage
-                                .addClass(settings.elMessageSizeClass+"-right")
-                                .css("top", (($elHeight/2) - ($elMessageHeight/2)));
+                                .addClass(settings.elMessageClass+"-right")
+                                .css("top", $elMessageTop);
                     }
                     else if (settings.side == "left"){
                         $elMessage
-                                .addClass(settings.elMessageSizeClass+"-left")
-                                .css("top", (($elHeight/2) - ($elMessageHeight/2)));
+                                .addClass(settings.elMessageClass+"-left")
+                                .css("top", $elMessageTop);
                     }
                     else if (settings.side == "top"){
                         $elMessage
-                                .addClass(settings.elMessageSizeClass+"-top")
-                                .css("left", (($elWidth/2) - ($elMessageWidth/2)));
+                                .addClass(settings.elMessageClass+"-top")
+                                .css("left", $elMessageLeft);
                     }
                     else if (settings.side == "bottom"){
                         $elMessage
-                                .addClass(settings.elMessageSizeClass+"-bottom")
-                                .css("left", (($elWidth/2) - ($elMessageWidth/2)));
+                                .addClass(settings.elMessageClass+"-bottom")
+                                .css("left", $elMessageLeft);
                     }
                 }
                 else{
                     $el.on('mousemove', function(pos) {
                         $(this).addClass(settings.tipHelp);
                         $elMessage
-                                .addClass(settings.elMessageSizeClass+'-fix')
+                                .addClass(settings.elMessageClass+'-fix')
                                 .css({top: pos.clientY+settings.elMessageFixIndent, left: pos.clientX+settings.elMessageFixIndent});
                     });
                 }
