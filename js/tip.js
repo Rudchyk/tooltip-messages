@@ -5,14 +5,15 @@
 
             var defaults = {
                 el: $(element),
+                parentWrapp: true,
                 elMessageClass: "messageTip",
                 elMessageBl: 'div',
-                fullWidthClass: 'full-width',
                 side: "right",
                 hover: false,
                 fix: false,
                 elMessageFixIndent: 10,
-                tipHelp: 'tip-help'
+                tipHelp: 'tip-help',
+                fullWidthClass: 'full-width'
             },
             settings = $.extend(defaults, options);
 
@@ -25,9 +26,11 @@
                     $elNum = $el.data("tip_class"),
                     $elMessage = $("<" + settings.elMessageBl + " class='" + settings.elMessageClass + ' '+ settings.elMessageClass + '-' + $elNum+ "'>" + $elData + "</" + settings.elMessageBl + ">");
 
-                $el
-                    .wrap('<div class="'+settings.elMessageClass+'-wrapper '+settings.fullWidthClass+'"></div>')
-                    .parent().append($elMessage);
+                if (settings.parentWrapp) {
+                    $el.wrap('<div class="'+settings.elMessageClass+'-wrapper '+settings.fullWidthClass+'"></div>');
+                };
+
+                $el.parent().append($elMessage);
 
                 var $elMessageHeight = $elMessage.actual( "outerHeight"),
                     $elMessageWidth = $elMessage.actual( "outerWidth"),

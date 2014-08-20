@@ -16,7 +16,7 @@ head.js(
         $('.tip-right-js').tooltip();
 
         $('.tip-top-js').tooltip({
-            side: "top",
+            side: "top"
         });
 
         $('.tip-bottom-js').tooltip({
@@ -24,7 +24,8 @@ head.js(
         });
 
         $('.tip-left-js').tooltip({
-            side: "left"
+            side: "left",
+            parentWrapp: false
         });
 
         $('.tip-fix-js').tooltip({
